@@ -22,10 +22,17 @@ public class Progam {
 
         Department department = new Department(2, null);
 
-        System.out.println("                      === TEST 1 : seller findByDepartment ===");
+        System.out.println("                      === TEST 2 : seller findByDepartment ===");
         List<Seller> list = sellerDao.findByDepartment(department);
 
         for (Seller sellers : list){
+            System.out.println(sellers);
+        }
+
+        System.out.println("                      === TEST 3 : seller findAll ===");
+        List<Seller> list2 = sellerDao.findAll();
+
+        for (Seller sellers : list2){
             System.out.println(sellers);
         }
 
