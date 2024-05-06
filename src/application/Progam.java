@@ -6,6 +6,7 @@ import model.entities.Department;
 import model.entities.Seller;
 
 import java.util.Date;
+import java.util.List;
 
 public class Progam {
 
@@ -17,5 +18,16 @@ public class Progam {
         Seller seller = sellerDao.findById(3);
 
         System.out.println(seller);
+        System.out.println();
+
+        Department department = new Department(2, null);
+
+        System.out.println("                      === TEST 1 : seller findByDepartment ===");
+        List<Seller> list = sellerDao.findByDepartment(department);
+
+        for (Seller sellers : list){
+            System.out.println(sellers);
+        }
+
     }
 }
