@@ -36,12 +36,24 @@ public class Progam {
             System.out.println(sellers);
         }
 
-        System.out.println("                      === TEST 3 : seller insert ===");
+        System.out.println("                      === TEST 4 : seller insert ===");
 
         Seller newSeller = new Seller(null, "greg", "greg@gmail.com", new Date(),4000.0, department);
 
         sellerDao.insert(newSeller);
         System.out.println("Inserted ! new Id : " + newSeller.getId());
+
+        System.out.println("                      === TEST 5 : seller update ===");
+
+        seller = sellerDao.findById(1);
+        seller.setName("martha wayne");
+
+        list2 = sellerDao.findAll();
+
+        for (Seller sellers : list2){
+            System.out.println(sellers);
+        }
+
 
 
     }
